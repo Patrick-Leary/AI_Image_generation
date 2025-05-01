@@ -1,0 +1,99 @@
+/* Styles are mostly AI generated */
+
+:root {
+    --text-color-normal: #eeeeee;
+    --text-color-muted: #c4c4c4;
+    --card-bg: #1f1f2c;
+    --btn-outline: #00f7ff;
+    --btn-hover: #004769;
+}
+
+body {
+    background: #000000; /* Solid color fallback */
+    background: linear-gradient(155deg, #000000 0%, #004769 70%, #1d9bb2 100%) fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    color: var(--text-color-normal);
+}
+
+.quiz-section {
+    padding: 2rem 0;
+}
+
+.quiz-image {
+    max-height: 400px;
+    object-fit: contain;
+    background-color: #000;
+}
+
+.selected {
+    background-color: var(--btn-hover);
+    color: white;
+}
+
+.progress {
+    height: 5px;
+    border-radius: 0;
+}
+
+.progress-bar {
+    background-color: #00f7ff;
+}
+
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color-normal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1, h2, h5 {
+    color: white;
+}
+
+.lead {
+    color: var(--text-color-muted);
+}
+
+.btn-primary {
+    background-color: #1d9bb2;
+    border-color: #1d9bb2;
+}
+
+.btn-primary:hover {
+    background-color: #004769;
+    border-color: #004769;
+}
+
+.btn-outline-primary {
+    color: var(--btn-outline);
+    border-color: var(--btn-outline);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--btn-hover);
+    border-color: var(--btn-outline);
+}
+
+.form-control, .form-select {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color-normal);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(29, 155, 178, 0.5);
+    color: white;
+}
+
+.form-label {
+    color: var(--text-color-normal);
+}

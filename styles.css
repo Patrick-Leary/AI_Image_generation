@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #000000; /* Solid color fallback */
+    background: #000000;
     background: linear-gradient(155deg, #000000 0%, #004769 70%, #1d9bb2 100%) fixed;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,7 +23,7 @@ body {
 }
 
 .quiz-image {
-    max-height: 400px;
+    max-height: 350px;
     object-fit: contain;
     background-color: #000;
 }

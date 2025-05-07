@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentQuestionIndex = index;
         const imageData = selectedImages[index];
         currentImage.src = imageData.path;
+        currentImage.alt = imageData.imageId;
         questionCounter.textContent = `Question ${index + 1} of ${QUIZ_SIZE}`;
         progressBar.style.width = `${((index + 1) / QUIZ_SIZE) * 100}%`;
     }

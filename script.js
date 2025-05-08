@@ -15,11 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const questionCounter = document.getElementById('question-counter');
     const progressBar = document.getElementById('progress-bar');
     const demographicsForm = document.getElementById('demographics-form');
+    const score = document.getElementById('score');
     
     // Quiz state
     let selectedImages = [];
     let currentQuestionIndex = 0;
     let userResponses = new Array(TOTAL_IMAGES + 1).fill(0);
+    let correctAnswers = 0;
     
     // Google Form settings
     const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeOOg_rCbQ-Z4CuvJAIJHnP_QZdn4mmZ3aB9C-G7aziEa92jg/formResponse';
@@ -108,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const imageData = selectedImages[currentQuestionIndex];
         const isCorrect = (userSelectedAI === imageData.isAI);
+        correctAnswers += isCorrect;
         
         // Record whether answer was correct (2) or incorrect (1)
         userResponses[imageData.imageId] = isCorrect ? 2 : 1;
@@ -172,10 +175,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(form);
         form.submit();
         document.body.removeChild(form);
-
-        console.log(form);
         
         // Show results screen
+        score.textContent = `You scored ${correctAnswers} out of 10.`;
         demographicsScreen.classList.add('d-none');
         resultsScreen.classList.remove('d-none');
     }
